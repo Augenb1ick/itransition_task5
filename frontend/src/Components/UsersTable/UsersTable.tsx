@@ -13,7 +13,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Box from '@mui/material/Box';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import {
-    CountryType,
     ERR_RATE_DECIMAL_PLACES,
     MAX_RANDOM_SEED, countries,
     MAX_ERR_RATE, MAX_SEED_VALUE,
@@ -24,6 +23,7 @@ import Button from '@mui/material/Button/Button';
 import exportFromJSON from 'export-from-json'
 import Snackbars from '../Snackbars/Snackbars';
 import './UsersTable.css'
+import { CountryType } from '../../models/country';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
