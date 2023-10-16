@@ -197,17 +197,16 @@ const generateFakeData = (location, seed, page, errors) => {
                 Number(errors)
             );
 
-            const address = `${dataToSendArr[4]}, ${dataToSendArr[5]}, ${
-                dataToSendArr[6]
-            }, ${dataToSendArr[7]}, ${
-                dataToSendArr[8] ? dataToSendArr[8] : ''
+            const address = `${dataToSendArr[2]}, ${dataToSendArr[3]}, ${
+                dataToSendArr[4]
+            }, ${dataToSendArr[5]} ${
+                dataToSendArr[6] ? ', ' + dataToSendArr[6] : ''
             }`;
 
             const usersData = {
-                num: dataToSendArr[0],
                 id: id,
-                fullName: dataToSendArr[2],
-                cell: dataToSendArr[3],
+                fullName: dataToSendArr[0],
+                cell: dataToSendArr[1],
                 address,
             };
 
