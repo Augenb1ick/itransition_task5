@@ -21,9 +21,9 @@ const fakerUsersNumbers = {
 };
 
 const fakerUsersIdPrefix = {
-    Russia: RU,
-    France: FR,
-    Germany: DE,
+    Russia: 'RU',
+    France: 'FR',
+    Germany: 'DE',
 };
 
 const generateFakeData = (location, seed, page, errors) => {
@@ -171,14 +171,14 @@ const generateFakeData = (location, seed, page, errors) => {
             const selectedMin = fakerUsersNumbers[location].min;
 
             faker.seed(finalSeed);
-            const number = faker.random
-                .number({ min: selectedMin, max: selectedMax })
+            const number = faker.number
+                .int({ min: selectedMin, max: selectedMax })
                 .toString();
 
             faker.seed(finalSeed);
             const generateId = (location) => {
                 const prefix = fakerUsersIdPrefix[location];
-                const id = faker.random.uuid();
+                const id = faker.string.uuid();
                 return `${prefix}-${id}`;
             };
             const id = generateId(location);
