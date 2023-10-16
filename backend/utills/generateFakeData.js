@@ -16,7 +16,9 @@ const generateFakeData = (location, seed, page, errors) => {
 
     const selectedFaker = fakerFunctions[location];
 
-    for (let i = 0; i < 9 + Number(page); i++) {
+    const numRecordsPerPage = 20 + (Number(page) - 1) * 10;
+
+    for (let i = 0; i < numRecordsPerPage; i++) {
         for (const faker of [selectedFaker]) {
             const finalSeed = Number(seed) + i;
             faker.seed(finalSeed);
