@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
     cors({
-        origin: ['http://localhost:3000'],
+        origin: ['https://user-registry-seven.vercel.app'],
         credentials: true,
         methods: 'GET, PUT, PATCH, POST, DELETE',
         allowedHeaders: ['Content-Type', 'origin', 'Authorization'],
