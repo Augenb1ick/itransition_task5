@@ -243,8 +243,8 @@ const UsersTable = () => {
                         <TableHead >
                             <TableRow>
                                 <StyledTableCell>№</StyledTableCell>
-                                <StyledTableCell align="left">Name</StyledTableCell>
                                 <StyledTableCell align="left">Id</StyledTableCell>
+                                <StyledTableCell align="left">Name</StyledTableCell>
                                 <StyledTableCell align="left">Adress</StyledTableCell>
                                 <StyledTableCell align="left">Phone</StyledTableCell>
                             </TableRow>
@@ -255,8 +255,8 @@ const UsersTable = () => {
                                 return (
                                     <StyledTableRow key={index} ref={isLastCell ? lastCellRef : null}>
                                         <StyledTableCell align="left">{index + 1}</StyledTableCell>
-                                        <StyledTableCell align="left">{row.fullName}</StyledTableCell>
                                         <StyledTableCell align="left">{row.id}</StyledTableCell>
+                                        <StyledTableCell align="left">{row.fullName}</StyledTableCell>
                                         <StyledTableCell align="left">{row.address}</StyledTableCell>
                                         <StyledTableCell align="left">{row.cell}</StyledTableCell>
                                     </StyledTableRow>
