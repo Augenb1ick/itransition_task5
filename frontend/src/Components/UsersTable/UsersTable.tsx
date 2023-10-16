@@ -254,8 +254,8 @@ const UsersTable = () => {
                             {users.map((row, index) => {
                                 const isLastCell = users.length === index + 1;
                                 return (
-                                    <StyledTableRow key={row.num} ref={isLastCell ? lastCellRef : null}>
-                                        <StyledTableCell align="left">{row.num}</StyledTableCell>
+                                    <StyledTableRow key={index} ref={isLastCell ? lastCellRef : null}>
+                                        <StyledTableCell align="left">{index + 1}</StyledTableCell>
                                         <StyledTableCell align="left">{row.fullName}</StyledTableCell>
                                         <StyledTableCell align="left">{row.id}</StyledTableCell>
                                         <StyledTableCell align="left">{row.address}</StyledTableCell>

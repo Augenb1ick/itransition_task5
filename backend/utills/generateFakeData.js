@@ -5,21 +5,6 @@ const fakerFunctions = {
     Germany: fakerDE,
 };
 
-const fakerUsersNumbers = {
-    Russia: {
-        min: 0,
-        max: 10000000,
-    },
-    France: {
-        min: 10000001,
-        max: 20000000,
-    },
-    Germany: {
-        min: 20000001,
-        max: 30000000,
-    },
-};
-
 const fakerUsersIdPrefix = {
     Russia: 'RU',
     France: 'FR',
@@ -167,14 +152,6 @@ const generateFakeData = (location, seed, page, errors) => {
                 return result;
             }
 
-            const selectedMax = fakerUsersNumbers[location].max;
-            const selectedMin = fakerUsersNumbers[location].min;
-
-            faker.seed(finalSeed);
-            const number = faker.number
-                .int({ min: selectedMin, max: selectedMax })
-                .toString();
-
             faker.seed(finalSeed);
             const generateId = (location) => {
                 const prefix = fakerUsersIdPrefix[location];
@@ -203,8 +180,6 @@ const generateFakeData = (location, seed, page, errors) => {
                 : '';
 
             const fakeDataArr = [
-                number,
-                id,
                 fullName,
                 cell,
                 state,
@@ -230,7 +205,7 @@ const generateFakeData = (location, seed, page, errors) => {
 
             const usersData = {
                 num: dataToSendArr[0],
-                id: dataToSendArr[1],
+                id: id,
                 fullName: dataToSendArr[2],
                 cell: dataToSendArr[3],
                 address,

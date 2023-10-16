@@ -1,6 +1,6 @@
 import { CountryType } from '../models/country';
 
-export const API_URL = 'https://testing-web.site';
+export const API_URL = 'http://localhost:4000';
 
 export const MAX_ERR_RATE = '1000';
 export const MAX_SEED_VALUE = '99999999';
