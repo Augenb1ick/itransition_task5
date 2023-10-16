@@ -149,7 +149,7 @@ const UsersTable = () => {
             })
             .catch(() => setIsError(true))
             .finally(() => setIsloading(false))
-    }, [region, seed, page, errRate])
+    }, [region, seed, page, errRate, isError])
 
     const handleRandomSeedClick = () => {
         const randomNumber = Math.floor(Math.random() * MAX_RANDOM_SEED) + 1;
