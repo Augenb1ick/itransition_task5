@@ -255,9 +255,7 @@ const UsersTable = () => {
                                 const isLastCell = users.length === index + 1;
                                 return (
                                     <StyledTableRow key={row.num} ref={isLastCell ? lastCellRef : null}>
-                                        <StyledTableCell component="th" scope="row">
-                                            {row.num}
-                                        </StyledTableCell>
+                                        <StyledTableCell align="left">{row.num}</StyledTableCell>
                                         <StyledTableCell align="left">{row.fullName}</StyledTableCell>
                                         <StyledTableCell align="left">{row.id}</StyledTableCell>
                                         <StyledTableCell align="left">{row.address}</StyledTableCell>
